@@ -15,8 +15,8 @@ namespace ETicaretAPI.Persistence
     {
         public static void AddPersistenceServices(this IServiceCollection services)
         {
-            services.AddDbContext<ETicaretAPIDbContext>(options => options.UseSqlServer("server=.;database=ETicaretAPI;trusted_connection=true;"));
-        }
+            services.AddDbContext<ETicaretAPIDbContext>(options => options.UseSqlServer(Configuration.ConnectionString));
 
+        }
     }
 }
